@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        QUnit.test('Sjekk om reactionTime blir riktig', function (assert) {
+            finishTime = 10000;
+            startTime = 2000;
+
+            reactionTime();
+
+            const actual = spentMs;
+            const expected = 8000;
+            assert.equal(actual, expected);
+        });
+    </script>
+
+</body>
